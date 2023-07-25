@@ -27,7 +27,8 @@ The first stage of gw-3'RACE sequencing data analysis is the preparation of the 
 mkdir genome/
 # Save the reference file in fasta format in new directory
 # Prepare STAR index
-STAR --runMode genomeGenerate --genomeDir genome/ --genomeFastaFiles genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa```
+STAR --runMode genomeGenerate --genomeDir genome/ --genomeFastaFiles genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa
+```
 
 
 ### 1. test.sh
