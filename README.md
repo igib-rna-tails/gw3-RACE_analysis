@@ -26,25 +26,56 @@ The first stage of gw-3'RACE sequencing data analysis is the preparation of the 
 # Create new directory
 mkdir genome/
 # Save the reference file in fasta format in new directory
-# Prepare STAR index
+# Prepare STAR index, an example:
 STAR --runMode genomeGenerate --genomeDir genome/ --genomeFastaFiles genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa
 ```
 
 
 ### 1. test.sh
-bash test_script.sh -i Wild_type_clone2_R1_001.fastq -I Wild_type_clone2_R2_001.fastq -o output_Wild_type_clone2_20220830
 
+```
+How to use:
+bash test_script.sh -i raw_data_R1.fastq -I raw_data_R2.fastq -o output_directory
+
+# An example:
+bash test_script.sh -i Wild_type_clone2_R1_001.fastq -I Wild_type_clone2_R2_001.fastq -o output_Wild_type_clone2_20220830
+```
 
 ### 2. Joining 
-  *run the script in the directory with the output)
-bash ../joining_R1R2.sh -i R1_Aligned.sortedByCoord.out.bam -I R2_Aligned.out.bam -a ../genome/annotation_6k_clean.bed
 
+Prepare annotation file in bed format in the directory 'genome'. Run the script in the directory with the output. 
+```
+How to use:
+cd output_directory/
+bash ../joining_R1R2.sh -i R1_Aligned.sortedByCoord.out.bam -I R2_Aligned.out.bam -a ../genome/annotation.bed
+cd ..
+
+# An example
+cd output_Wild_type_clone2_20220830/
+bash ../joining_R1R2.sh -i R1_Aligned.sortedByCoord.out.bam -I R2_Aligned.out.bam -a ../genome/annotation_6k_clean.bed
+cd ..
+```
 
 ### 3.bigwigs 
-  * run the script in the directory with the output
-  * R1 input: bed, R2 input bam!
-bash ../R1_bed_bigWig.sh -i R1_Aligned.sortedByCoord.out.bam_sorted_unique.bed -g ../genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa.fai 
+This script allows you to obtain genome coverage files in the bigwig format, which can be visualized in, for example, the IGV software or other coverage data visualization tools. The script generates coverage files separately for R1 and R2 reads. It uses the indexed reference in fasta format (.fa.fai).
 
-bash ../R2_bed_bigWig.sh -i R2_Aligned.out.bam  -g ../genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa.fai 
+Run the script in the directory with the output. 
+The input files (except for the reference) were generated in the previous step.
+
+
+```
+# How to use:
+cd output_directory/
+bash ../R1_bed_bigWig.sh -i R1_Aligned.sortedByCoord.out.bam_sorted_unique.bed -g ../genome/reference.fa.fai 
+bash ../R2_bed_bigWig.sh -i R2_Aligned.out.bam  -g ../genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa.fai
+cd ..
+
+# An example:
+cd output_directory/
+bash ../R1_bed_bigWig.sh -i R1_Aligned.sortedByCoord.out.bam_sorted_unique.bed -g ../genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa.fai 
+bash ../R2_bed_bigWig.sh -i R2_Aligned.out.bam  -g ../genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa.fai
+```
 
 ### 4. Analysis of tails using Python script
+### 5. Optional: Visualization with R
+![Here]('https://github.com/igib-rna-tails/gw3-RACE_vizualization') you will find a library in R for data visualization (author: Maciej Grochowski): 
