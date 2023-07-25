@@ -41,7 +41,7 @@ bash test_script.sh -i raw_data_R1.fastq -I raw_data_R2.fastq -o output_director
 bash test_script.sh -i Wild_type_clone2_R1_001.fastq -I Wild_type_clone2_R2_001.fastq -o output_Wild_type_clone2_20220830
 ```
 
-### 2. Joining 
+### 2. Joining R1 and R2 reads (script: joining_R1R2.sh)
 
 Prepare annotation file in bed format in the directory 'genome'. Run the script in the directory with the output. 
 ```
@@ -56,7 +56,7 @@ bash ../joining_R1R2.sh -i R1_Aligned.sortedByCoord.out.bam -I R2_Aligned.out.ba
 cd ..
 ```
 
-### 3.bigwigs 
+### 3.Create genome coverage files in bigwig format (scripts: R1_bed_bigWig.sh, R2_bed_bigWig.sh)
 This script allows you to obtain genome coverage files in the bigwig format, which can be visualized in, for example, the IGV software or other coverage data visualization tools. The script generates coverage files separately for R1 and R2 reads. It uses the indexed reference in fasta format (.fa.fai).
 
 Run the script in the directory with the output. 
@@ -77,5 +77,8 @@ bash ../R2_bed_bigWig.sh -i R2_Aligned.out.bam  -g ../genome/Schizosaccharomyces
 ```
 
 ### 4. Analysis of tails using Python script
+Input data: output_directory/output_table.tab
+Output data: the final table corresponded to a uniquely aligned R1 read and included information about the tail type, 3'-end coordinate (if applicable), tail length, number of Us (if applicable), gene name, and the distance from the detected 3'-end to the annotated TES.
+
 ### 5. Optional: Visualization with R
 ![Here]('https://github.com/igib-rna-tails/gw3-RACE_vizualization') you will find a library in R for data visualization (author: Maciej Grochowski): 
