@@ -1,6 +1,7 @@
 # Pipeline to analyze Genome-wide 3'RACE data (gw-3'RACE)
 Script to analysis of gw-3'RACE data from fastq files.
 ## gw3’-RACE library preparation
+<img src="gw3RACE_library_preparation.jpg" width="500" height="300">
 ![Protocol of library praparation](gw3RACE_library_preparation.jpg)
 
 
