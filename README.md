@@ -81,4 +81,4 @@ Input data: output_directory/output_table.tab
 Output data: the final table corresponded to a uniquely aligned R1 read and included information about the tail type, 3'-end coordinate (if applicable), tail length, number of Us (if applicable), gene name, and the distance from the detected 3'-end to the annotated TES.
 
 ### 5. Optional: Visualization with R
-![Here]('https://github.com/igib-rna-tails/gw3-RACE_vizualization') you will find a library in R for data visualization (author: Maciej Grochowski): 
+![Here]('https://github.com/igib-rna-tails/gw3-RACE_vizualization') you will find a library in R for data visualization (prepared by Maciej Grochowski).
