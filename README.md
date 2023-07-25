@@ -1,4 +1,4 @@
-# Pipeline to analyze genome-wide 3'RACE data (gw-3'RACE)
+# Pipeline to analyze Genome-wide 3'RACE data (gw-3'RACE)
 Script to analysis of gw-3'RACE data from fastq files.
 
 
