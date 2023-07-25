@@ -31,14 +31,14 @@ STAR --runMode genomeGenerate --genomeDir genome/ --genomeFastaFiles genome/Schi
 ```
 
 
-### 1. Preprocessing of data and alignment of reads to the reference genome (script: test.sh)
+### 1. Preprocessing of data and alignment of reads to the reference genome (script: gw3RACE_processing.sh)
 
 ```
 How to use:
-bash test_script.sh -i raw_data_R1.fastq -I raw_data_R2.fastq -o output_directory
+bash gw3RACE_processing.sh -i raw_data_R1.fastq -I raw_data_R2.fastq -o output_directory
 
 # An example:
-bash test_script.sh -i Wild_type_clone2_R1_001.fastq -I Wild_type_clone2_R2_001.fastq -o output_Wild_type_clone2_20220830
+bash gw3RACE_processing.sh -i Wild_type_clone2_R1_001.fastq -I Wild_type_clone2_R2_001.fastq -o output_Wild_type_clone2_20220830
 ```
 
 ### 2. Joining R1 and R2 reads (script: joining_R1R2.sh)
