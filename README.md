@@ -2,19 +2,13 @@
 Script to analysis of gw-3'RACE data from fastq files.
 
 ## Sequencing Data Analysis Protocol
-Sequencing data were filtered for read pairs where R2 contained a 3'-adapter sequence ligated at the first steps of the library preparation. Low-quality read pairs were removed using fastp [36].
-
-Reads R1 and R2 were aligned separately to the genome using the STAR aligner. For R2, settings allowed soft-clipping and maintaining non-aligned reads in the final output (.sam file).
-
-Following this, uniquely aligned reads were extracted from the R1 alignment file and matched to genomic features, forming a .bed type file, using samtools and bedtools utilities.
-
-In the next step, R1 read names from the created .bed file were matched with their R2 read mates from the .sam file. A custom table was created containing in each row the R2 CIGAR string, read name, sequence, matched feature from the R1 mate, and R1 and R2 alignment coordinates.
-
-These raw data tables served as a basis for tail analysis. Information about the tail existence, its length and type were extracted from the tables using a custom Python script.
-
-The script identified tail sequences from the R2 read based on the CIGAR string and categorized tails as poly(A), poly(A)U, oligo(U), or other using text search (grep regular expressions). If R2 was not aligned and thus a CIGAR string was unavailable, the R2 sequence was scanned using text search to categorize the tail into one of the aforementioned four categories.
-
-The script output was a .csv type table containing necessary information for downstream data analysis and visualization. The final table contained one row per uniquely aligned R1 read with information about tail type, 3'-end coordinate (where applicable), tail length, number of Us (where applicable), gene name, and distance of detected 3'-end from annotated TES.
+* Sequencing data were filtered for read pairs where R2 contained a 3'-adapter sequence ligated at the first steps of the library preparation. Low-quality read pairs were removed using fastp.
+* Reads R1 and R2 were aligned separately to the genome using the STAR aligner. For R2, settings allowed soft-clipping and maintaining non-aligned reads in the final output (.sam file).
+* Following this, uniquely aligned reads were extracted from the R1 alignment file and matched to genomic features, forming a .bed type file, using samtools and bedtools utilities.
+* In the next step, R1 read names from the created .bed file were matched with their R2 read mates from the .sam file. A custom table was created containing in each row the R2 CIGAR string, read name, sequence, matched feature from the R1 mate, and R1 and R2 alignment coordinates.
+* These raw data tables served as a basis for tail analysis. Information about the tail existence, its length and type were extracted from the tables using a custom Python script.
+* The script identified tail sequences from the R2 read based on the CIGAR string and categorized tails as poly(A), poly(A)U, oligo(U), or other using text search (grep regular expressions). If R2 was not aligned and thus a CIGAR string was unavailable, the R2 sequence was scanned using text search to categorize the tail into one of the aforementioned four categories.
+* The script output was a .csv type table containing necessary information for downstream data analysis and visualization. The final table contained one row per uniquely aligned R1 read with information about tail type, 3'-end coordinate (where applicable), tail length, number of Us (where applicable), gene name, and distance of detected 3'-end from annotated TES.
 
 ## Stages of data analysis
 
