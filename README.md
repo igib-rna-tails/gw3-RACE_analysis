@@ -21,7 +21,7 @@ The script output was a .csv type table containing necessary information for dow
 ### 0. Preparation of STAR index
 The first stage of gw-3'RACE sequencing data analysis is the preparation of the index. In our script, we use the STAR aligner. Below is an example code for preparing a STAR reference for S. pombe yeast. Please pay attention to the appropriate selection of references, downloading them, and placing them in the appropriate directory to which we will refer later. I suggest creating a genome directory and directing the indexed references there.
 
-'STAR --runMode genomeGenerate --genomeDir genome/ --genomeFastaFiles genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa'
+```STAR --runMode genomeGenerate --genomeDir genome/ --genomeFastaFiles genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa```
 
 
 ### 1. test.sh
