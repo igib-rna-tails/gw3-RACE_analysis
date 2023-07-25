@@ -31,7 +31,7 @@ STAR --runMode genomeGenerate --genomeDir genome/ --genomeFastaFiles genome/Schi
 ```
 
 
-### 1. test.sh
+### 1. Preprocessing of data and alignment of reads to the reference genome (script: test.sh)
 
 ```
 How to use:
