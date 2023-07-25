@@ -2,9 +2,9 @@
 Script to analysis of gw-3'RACE data from fastq files.
 
 
-_Lidia Lipińska-Zubrycka, Maciej Grochowski, Michał Małecki_
+_Authors: Lidia Lipińska-Zubrycka, Maciej Grochowski, Michał Małecki_
 
-_Institute of Genetics and Biotechnology, University of Warsaw_
+_(Institute of Genetics and Biotechnology, University of Warsaw)_
 
 
 
