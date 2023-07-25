@@ -85,8 +85,7 @@ bash ../R2_bed_bigWig.sh -i R2_Aligned.out.bam  -g ../genome/Schizosaccharomyces
 ### 4. Analysis of tails using Python script
 Input data: output_directory/output_table.tab
 Output data: the final table corresponded to a uniquely aligned R1 read and included information about the tail type, 3'-end coordinate (if applicable), tail length, number of Us (if applicable), gene name, and the distance from the detected 3'-end to the annotated TES.
-
-Please open *Analysis_of_tails_gw3RACE.ipynb** in Jupyter notebook. All functions are available in **gw3RACE_functions.py**.
+Please open **Analysis_of_tails_gw3RACE.ipynb** in Jupyter notebook. All functions are available in **gw3RACE_functions.py**.
 
 
 ### 5. Optional: Visualization with R
