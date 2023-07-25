@@ -1,5 +1,5 @@
-# Pipeline to analyze Tail-seq data with an emphasis on 3' mRNA tails identification
-Script to analysis of TAIL-seq data from fastq files.
+# Pipeline to analyze genome-wide 3'RACE data (gw-3'RACE)
+Script to analysis of gw-3'RACE data from fastq files.
 
 
 ### 0. PrepareSTAR index
