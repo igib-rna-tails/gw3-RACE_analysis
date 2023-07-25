@@ -1,8 +1,7 @@
 # Pipeline to analyze Genome-wide 3'RACE data (gw-3'RACE)
 Script to analysis of gw-3'RACE data from fastq files.
 ## gw3’-RACE library preparation
-<img src="gw3RACE_library_preparation.jpg" width="500" height="300">
-![Protocol of library praparation](gw3RACE_library_preparation.jpg)
+<img src="gw3RACE_library_preparation.jpg" width="200" height="300">
 
 
 RNA was extracted from exponentially grown cultures with hot phenol protocol followed by clean-up using Qiagen RNeasy Kit column with DNase I treatment. The rRNA depletion was achieved using a riboPOOL kit (siTOOLs). After depletion, RNA was cleaned-up using MiniElute Cleanup columns (Qiauigen) and adenylated 3'-adapter was ligated using T4 RNA ligase 2 (NEB). The reaction product was purified using MiniElute Cleanup (QiagenQuigen) and reverse transcription was performed using Superscript III (Thermo). The product was purified using AMPure beads and second strand synthesis was performed like in using  E.coli DNA polymerase, E.coli DNA ligase I and NEBNext Second Strand Synthesis Buffer. The reaction product was cleaned up using AMPure beads. Double-stranded DNA was fragmented using tagmentase (Tn5) loaded with i5 compatible adapter. Tn5 enzyme was obtained as described in . Products were cleaned-up using AMPure beads.
