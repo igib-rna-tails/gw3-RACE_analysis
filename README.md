@@ -89,5 +89,5 @@ Please open **Analysis_of_tails_gw3RACE.ipynb** in Jupyter notebook. All functio
 
 
 ### 5. Optional: Visualization with R
-Here you can find a library in R for data visualization (prepared by Maciej Grochowski): ![https://github.com/igib-rna-tails/gw3-RACE_vizualization]
-('https://github.com/igib-rna-tails/gw3-RACE_vizualization').
+Here you can find a library in R for data visualization (prepared by Maciej Grochowski): 
+https://github.com/igib-rna-tails/gw3-RACE_vizualization.
