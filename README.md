@@ -62,7 +62,7 @@ bash ../joining_R1R2.sh -i R1_Aligned.sortedByCoord.out.bam -I R2_Aligned.out.ba
 cd ..
 ```
 
-### 3.Create genome coverage files in bigwig format (scripts: R1_bed_bigWig.sh, R2_bed_bigWig.sh)
+### 3. Create genome coverage files in bigwig format (scripts: R1_bed_bigWig.sh, R2_bed_bigWig.sh)
 This script allows you to obtain genome coverage files in the bigwig format, which can be visualized in, for example, the IGV software or other coverage data visualization tools. The script generates coverage files separately for R1 and R2 reads. It uses the indexed reference in fasta format (.fa.fai).
 
 Run the script in the directory with the output. 
