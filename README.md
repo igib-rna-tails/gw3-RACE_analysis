@@ -44,7 +44,7 @@ How to use:
 bash gw3RACE_processing.sh -i raw_data_R1.fastq -I raw_data_R2.fastq -o output_directory
 
 # An example:
-bash gw3RACE_processing.sh -i Wild_type_clone2_R1_001.fastq -I Wild_type_clone2_R2_001.fastq -o output_Wild_type_clone2_20220830
+bash gw3RACE_processing.sh -i data/Spombe_R1.fastq -I data/Spombe_R2.fastq -o output_Spombe
 ```
 
 ### 2. Joining R1 and R2 reads (script: joining_R1R2.sh)
@@ -57,7 +57,7 @@ bash ../joining_R1R2.sh -i R1_Aligned.sortedByCoord.out.bam -I R2_Aligned.out.ba
 cd ..
 
 # An example
-cd output_Wild_type_clone2_20220830/
+cd output_Spombe/
 bash ../joining_R1R2.sh -i R1_Aligned.sortedByCoord.out.bam -I R2_Aligned.out.bam -a ../genome/annotation_6k_clean.bed
 cd ..
 ```
