@@ -11,7 +11,7 @@ _Authors: Lidia Lipińska-Zubrycka, Maciej Grochowski, Michał Małecki (Institu
 <img src="gw3RACE_library_preparation.jpg" width="200" height="300">
 
 #### Details:
-RNA was extracted from exponentially grown cultures with hot phenol protocol followed by clean-up using Qiagen RNeasy Kit column with DNase I treatment. The rRNA depletion was achieved using a riboPOOL kit (siTOOLs). After depletion, RNA was cleaned-up using MiniElute Cleanup columns (Qiauigen) and adenylated 3'-adapter was ligated using T4 RNA ligase 2 (NEB). The reaction product was purified using MiniElute Cleanup (QiagenQuigen) and reverse transcription was performed using Superscript III (Thermo). The product was purified using AMPure beads and second strand synthesis was performed like in using  E.coli DNA polymerase, E.coli DNA ligase I and NEBNext Second Strand Synthesis Buffer. The reaction product was cleaned up using AMPure beads. Double-stranded DNA was fragmented using tagmentase (Tn5) loaded with i5 compatible adapter. Products were cleaned-up using AMPure beads.
+RNA was extracted from exponentially grown cultures with hot phenol protocol followed by clean-up using Qiagen RNeasy Kit column with DNase I treatment. The rRNA depletion was achieved using a riboPOOL kit (siTOOLs). After depletion, RNA was cleaned-up using MiniElute Cleanup columns (Qiagen), and adenylated 3'-adapter was ligated using T4 RNA ligase 2 (NEB). The reaction product was purified using MiniElute Cleanup (Qiagen), and reverse transcription was performed using Superscript III (Thermo). The product was purified using AMPure beads, and second strand synthesis was performed using  E. coli DNA polymerase, E.coli DNA ligase I, and NEBNext Second Strand Synthesis Buffer. The reaction product was cleaned up using AMPure beads. Double-stranded DNA was fragmented using tagmentase (Tn5) loaded with i5 compatible adapter. Products were cleaned-up using AMPure beads.
 
 
 ## Sequencing Data Analysis Protocol
@@ -26,12 +26,12 @@ RNA was extracted from exponentially grown cultures with hot phenol protocol fol
 ## Stages of data analysis
 
 ### 0. Preparation of STAR index
-The first stage of gw-3'RACE sequencing data analysis is the preparation of the index. In our script, we use the STAR aligner. Below is an example code for preparing a STAR reference for S. pombe yeast. Please pay attention to the appropriate selection of references, downloading them, and placing them in the appropriate directory to which we will refer later. I suggest creating a genome directory and directing the indexed references there.
+The first stage of gw-3'RACE sequencing data analysis is preparing the index. In our script, we use the STAR aligner. Below is an example code for preparing a STAR reference for S. pombe yeast. Please pay attention to the appropriate selection of references, downloading them, and placing them in the appropriate directory to which we will refer later. I suggest creating a genome directory and directing the indexed references there.
 
 ```
 # Create new directory
 mkdir genome/
-# Save the reference file in fasta format in new directory
+# Save the reference file in fasta format in the new directory
 # Prepare STAR index, an example:
 STAR --runMode genomeGenerate --genomeDir genome/ --genomeFastaFiles genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa
 ```
