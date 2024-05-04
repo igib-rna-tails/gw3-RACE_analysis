@@ -35,7 +35,7 @@ mkdir genome/
 # Prepare STAR index, an example:
 STAR --runMode genomeGenerate --genomeDir genome/ --genomeFastaFiles genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa
 ```
-
+Expected run time for demo on a "normal" desktop computer: ~ 27 sec
 
 ### 1. Preprocessing of data and alignment of reads to the reference genome (script: gw3RACE_processing.sh)
 
@@ -44,8 +44,9 @@ How to use:
 bash gw3RACE_processing.sh -i raw_data_R1.fastq -I raw_data_R2.fastq -o output_directory
 
 # An example:
-bash gw3RACE_processing.sh -i data/Spombe_R1.fastq -I data/Spombe_R2.fastq -o output_Spombe
+bash gw3RACE_processing.sh -i Spombe_R1.fastq -I Spombe_R2.fastq -o output_Spombe
 ```
+Expected run time for demo on a "normal" desktop computer: ~ 11 sec
 
 ### 2. Joining R1 and R2 reads (script: joining_R1R2.sh)
 
@@ -56,11 +57,15 @@ cd output_directory/
 bash ../joining_R1R2.sh -i R1_Aligned.sortedByCoord.out.bam -I R2_Aligned.out.bam -a ../genome/annotation.bed
 cd ..
 
+
+
 # An example
 cd output_Spombe/
 bash ../joining_R1R2.sh -i R1_Aligned.sortedByCoord.out.bam -I R2_Aligned.out.bam -a ../genome/annotation_6k_clean.bed
 cd ..
+
 ```
+Expected run time for demo on a "normal" desktop computer: ~ 2 sec
 
 ### 3. Create genome coverage files in bigwig format (scripts: R1_bed_bigWig.sh, R2_bed_bigWig.sh)
 This script allows you to obtain genome coverage files in the bigwig format, which can be visualized in, for example, the IGV software or other coverage data visualization tools. The script generates coverage files separately for R1 and R2 reads. It uses the indexed reference in fasta format (.fa.fai).
@@ -87,6 +92,7 @@ Input data: output_directory/output_table.tab
 Output data: the final table corresponded to a uniquely aligned R1 read and included information about the tail type, 3'-end coordinate (if applicable), tail length, number of Us (if applicable), gene name, and the distance from the detected 3'-end to the annotated TES.
 Please open **Analysis_of_tails_gw3RACE.ipynb** in Jupyter notebook. All functions are available in **gw3RACE_functions.py**.
 
+Expected run time for demo on a "normal" desktop computer: ~ 10 sec
 
 ### 5. Optional: Visualization with R
 Here you can find a library in R for data visualization (prepared by Maciej Grochowski): 
