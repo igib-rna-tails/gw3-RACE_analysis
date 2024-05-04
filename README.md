@@ -97,3 +97,6 @@ Expected run time for demo on a "normal" desktop computer: ~ 10 sec
 ### 5. Optional: Visualization with R
 Here you can find a library in R for data visualization (prepared by Maciej Grochowski): 
 https://github.com/igib-rna-tails/gw3-RACE_vizualization.
+
+
+*Scripts were tested on a computer (16 GB RAM) running Ubuntu 20.04, with Python version 3.9.15. The versions of individual programs were following the requirements file. If a version is not specified in the file, please install the latest available version.*
