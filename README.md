@@ -1,5 +1,5 @@
 # Pipeline to analyze Genome-wide 3'RACE data (gw-3'RACE)
-### Script to analysis of gw-3'RACE data from fastq files.
+### Script for the analysis of gw-3'RACE data from FastQ files.
 
 
 _Authors: Lidia Lipińska-Zubrycka, Maciej Grochowski, Michał Małecki (Institute of Genetics and Biotechnology, University of Warsaw)_
