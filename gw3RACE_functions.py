@@ -361,4 +361,32 @@ def distance_to_TES(cigar, strand_R1, stop_R2, gene_start, gene_stop):
         else:
             return 0  # Return 0 for undefined strand orientations or other errors
 
+def safe_distance_to_TES(cigar, strand_R1, stop_R2, gene_start, gene_stop):
+    """
+    Calculate the distance to the transcription end site (TES) safely, accounting for possible None values in parameters.
+
+    This function computes the distance from the 3' end of the read (R2) to the transcription end site (TES). 
+    It ensures that calculations are only performed when all parameters are provided and are not None.
+    
+    Parameters:
+    - cigar (str): The CIGAR string from the alignment.
+    - strand_R1 (str): The strand information for R1, expected to be '+' or '-'.
+    - stop_R2 (int or None): The stop coordinate of the R2 read. If None, the function returns None.
+    - gene_start (int or None): The start coordinate of the gene. If None, the function returns None.
+    - gene_stop (int or None): The stop coordinate of the gene. If None, the function returns None.
+
+    Returns:
+    int or None: The distance to TES if all inputs are valid, otherwise None if any input is None.
+
+    The function ensures that the resulting distance is calculated correctly based on the strand orientation:
+    - For '-' strand, the distance is calculated as gene_start minus stop_R2.
+    - For '+' strand, the distance is calculated as stop_R2 minus gene_stop.
+    """
+    if isinstance(stop_R2, type(None)) or isinstance(gene_start, type(None)) or isinstance(gene_stop, type(None)):
+        return None  # Returns None if any of the parameters is None
+    else:
+        if strand_R1 == '-':
+            return int(gene_start) - int(stop_R2)  # Ensures all values are integers
+        elif strand_R1 == '+':
+            return int(stop_R2) - int(gene_stop)  # Ensures all values are integers
 
