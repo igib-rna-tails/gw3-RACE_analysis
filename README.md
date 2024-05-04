@@ -86,6 +86,7 @@ cd output_directory/
 bash ../R1_bed_bigWig.sh -i R1_Aligned.sortedByCoord.out.bam_sorted_unique.bed -g ../genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa.fai 
 bash ../R2_bed_bigWig.sh -i R2_Aligned.out.bam  -g ../genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa.fai
 ```
+Expected run time for demo on a "normal" desktop computer: < 1 sec
 
 ### 4. Analysis of tails using Python script
 Input data: output_directory/output_table.tab
