@@ -2,7 +2,7 @@
 #######################################################################
 # this script takes bam file R2 and created bw files for + and - strand
 # and sorted bed with R2 reads (uniquely aligned)
-# -i input bed;; -o genome sizes (fai file)
+# -i input bed;; -o genome sizes (fai file) 
 #######################################################################
 # this bit sets up user input variables
 while getopts i:g: flag
