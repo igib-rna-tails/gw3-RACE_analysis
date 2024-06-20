@@ -1,7 +1,7 @@
 #! /bin/bash
 #######################################################################
 # this script takes bed file R1 and created bw files for + and - strand
-# -i input bed;; -o genome sizes (fai file)
+# -i input bed;; -o genome sizes (fai file) 
 #######################################################################
 # this bit sets up user input variables
 while getopts i:g: flag
