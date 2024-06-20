@@ -1,6 +1,6 @@
 #! /bin/bash
 #######################################################################
-# this script joins mapped R1 reads with part of sam for R2 read
+# this script joins mapped R1 reads with part of sam for R2 read 
 #######################################################################
 # this bit sets up user input variables
 while getopts i:I:a: flag
