@@ -113,11 +113,11 @@ def take_tail_fromcigar8(strand, cig, seq):
 
 pattern_polyAU_forward3 = re.compile("^A{1,}T{2,}") # reverse transcribed
 pattern_oligoU_forward3 = re.compile("^A{1,}$")
-pattern_polyA_forward3 = re.compile("^T{2,}$")
+pattern_polyA_forward3 = re.compile("^T{1,}$")
 
 pattern_polyAU_reverse3 = re.compile("A{2,}T{1,}$") # reverse transcribed
 pattern_oligoU_reverse3 = re.compile("T{1,}$")
-pattern_polyA_reverse3 = re.compile("A{2,}$") 
+pattern_polyA_reverse3 = re.compile("A{1,}$") 
 
 def test_tail_cigargrep8(cigar_grep, strand_R1, tail):
     """
@@ -134,7 +134,7 @@ def test_tail_cigargrep8(cigar_grep, strand_R1, tail):
     The function uses several regex patterns to identify different tail types:
     - "polyAU": A sequence starting with two or more 'A's followed by one or more 'T's (or vice versa for the reverse strand).
     - "oligoU": A sequence composed entirely of 'A's (interpreted as uridines in the context of RNA).
-    - "polyA": A sequence of two or more 'T's (adenines in the context of RNA).
+    - "polyA": A sequence of one or more 'T's (adenines in the context of RNA).
     - "mixed_tail": A sequence that does not match any of the above patterns.
     - "strand_nn": Returned if the strand orientation is not recognized.
     - "mixed_tail_grep": A special case of "mixed_tail" when the analysis is based on grep.
